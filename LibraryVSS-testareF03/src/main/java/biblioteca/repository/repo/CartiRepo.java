@@ -13,7 +13,7 @@ import java.util.List;
 
 public class CartiRepo implements CartiRepoInterface {
 	
-	private String file = "F:\\LibraryVSS-testareF03\\src\\main\\resources\\cartiBD.txt";
+	private String file = "F:\\IdeaProjects\\LibraryVSS-testareF03\\src\\main\\resources\\cartiBD.txt";
 	
 	public CartiRepo(){
 		URL location = CartiRepo.class.getProtectionDomain().getCodeSource().getLocation();

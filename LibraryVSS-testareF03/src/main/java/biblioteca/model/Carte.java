@@ -3,6 +3,7 @@ package biblioteca.model;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 public class Carte {
 	
@@ -138,5 +139,20 @@ public class Carte {
 		
 		return c;
 	}
-	
+
+	@Override
+	public boolean equals(Object o) {
+		if (this == o) return true;
+		if (o == null || getClass() != o.getClass()) return false;
+		Carte carte = (Carte) o;
+		return Objects.equals(titlu, carte.titlu) &&
+				Objects.equals(referenti, carte.referenti) &&
+				Objects.equals(anAparitie, carte.anAparitie) &&
+				Objects.equals(cuvinteCheie, carte.cuvinteCheie);
+	}
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(titlu, referenti, anAparitie, cuvinteCheie);
+	}
 }

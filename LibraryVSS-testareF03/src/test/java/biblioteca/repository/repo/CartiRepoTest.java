@@ -205,7 +205,7 @@ public class CartiRepoTest {
 
         //When
         Carte carteNoua = new Carte();
-        carteNoua.setTitlu("Miau miau");
+        carteNoua.setTitlu("kolo miau");
         carteNoua.setAnAparitie("1999");
         carteNoua.setReferenti(Arrays.asList("Ref1", "Ref2", "Ref3"));
         carteNoua.setCuvinteCheie(Arrays.asList("Cuv1", "Cuv2", "Cuv3"));
@@ -250,16 +250,16 @@ public class CartiRepoTest {
         carte1.setCuvinteCheie(cuvinteCheie);
 
         Carte carte2 = new Carte();
-        carte1.setTitlu("Povesti");
+        carte2.setTitlu("Povesti");
         referenti = new ArrayList<>();
         referenti.add("Mihai Eminescu");
         referenti.add("Ion Caragiale");
         referenti.add("Ion Creanga");
-        carte1.setReferenti(referenti);
-        carte1.setAnAparitie("1973");
+        carte2.setReferenti(referenti);
+        carte2.setAnAparitie("1973");
         cuvinteCheie = new ArrayList<>();
         cuvinteCheie.add("Corint");
-        carte1.setCuvinteCheie(cuvinteCheie);
+        carte2.setCuvinteCheie(cuvinteCheie);
 
         List<Carte> cartiTest = new ArrayList<>();
         cartiTest.add(carte1);
@@ -268,6 +268,8 @@ public class CartiRepoTest {
         CartiRepo cartiRepo = new CartiRepo();
         List<Carte> cartiRezultat1=cartiRepo.getCartiOrdonateDinAnul("1973");
         List<Carte> cartiRezultat2=cartiRepo.getCartiOrdonateDinAnul("f");
+        System.out.println(cartiTest);
+        System.out.println(cartiRezultat1);
 
         assertTrue(cartiTest.equals(cartiRezultat1));
 
